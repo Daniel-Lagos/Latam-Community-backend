@@ -1,7 +1,10 @@
 const express = require('express');
+const database = require('./database/config');
+require('dotenv').config();
+
 const app = express();
 
-require('dotenv').config();
+database();
 
 //public folder
 app.use(express.static('public'));
