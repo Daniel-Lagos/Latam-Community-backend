@@ -26,3 +26,4 @@ module.exports = {
     createUser,
     renewToken
 }
+
