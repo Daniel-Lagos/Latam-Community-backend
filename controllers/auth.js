@@ -1,12 +1,28 @@
 const {response} = require('express');
 
-const event = (req, res = response) => {
-    res.status(200).json({
-        ok: true
+const loginUser = async (req, res = response) => {
+    return res.status(200).json({
+        ok: true,
+        msg: 'Login User'
     });
 }
 
+const createUser = async (req, res = response) => {
+    return res.status(200).json({
+        ok: true,
+        msg: 'Create User'
+    });
+}
+
+const renewToken = async (req, res) => {
+    return res.status(200).json({
+        ok: true,
+        msg: 'Renew Token'
+    });
+}
 
 module.exports = {
-    event
+    loginUser,
+    createUser,
+    renewToken
 }

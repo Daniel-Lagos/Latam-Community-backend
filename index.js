@@ -14,9 +14,9 @@ app.use(express.static('public'));
 app.use(express.json());
 
 //routers
-app.use('api/auth', require('./routes/auth'));
+app.use('/api/auth', require('./routes/auth'));
 
-app.use('api/community', require('./routes/community'));
+app.use('/api/community', require('./routes/community'));
 
 app.listen(process.env.PORT, () => {
     console.log(`run in port ${process.env.PORT}`);
