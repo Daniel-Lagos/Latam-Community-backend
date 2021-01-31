@@ -6,13 +6,12 @@ const validateJWT = require('../middlewares/validate-jwt');
 const router = Router();
 
 router.post('/', [
-    check('nickname', 'El nickname es obligatorio').notEmpty(),
     check('password', 'La Contrasenia debe contener min 6 caracteres').isLength({min: 6}),
     fieldValidator
 ], loginUser);//login//
 
 router.post('/new', [
-        check('nickname', 'El nickname es obligatorio').notEmpty(),
+        check('nickName', 'El nickname es obligatorio').notEmpty(),
         check('name', "El nombre debe es obligatorio").notEmpty(),
         check('email', 'El Email es obligatorio').isEmail(),
         check('password', 'La Contrasenia debe contener min 6 caracteres').isLength({min: 6}),
